@@ -18,6 +18,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/product', function () {
+    return view('product');
+})->middleware(['auth', 'verified'])->name('product');
+
 Route::post('/feedback', [FeedbackController::class, 'store']);
 
 require __DIR__ . '/auth.php';

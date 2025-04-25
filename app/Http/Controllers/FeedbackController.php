@@ -17,7 +17,7 @@ class FeedbackController extends Controller
         ]);
 
         // Send a POST request to an external API
-        $response = Http::post('https://hook.us2.make.com/r8h1lkopjfp82rjp945e648i6myq116q', [
+        $response = Http::post('https://hook.us2.make.com/qttuedvxjoz58s80y1q0mpmux951at0t', [
             'name' => $validated['name'],
             'email' => $validated['email'],
             'message' => $validated['message'],
